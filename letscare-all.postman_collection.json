@@ -1,0 +1,30 @@
+{
+  "info": {
+    "name": "Lets Care All API",
+    "_postman_id": "b12fcb97-82d4-4862-9426-f0a67a9c9aa0",
+    "description": "Core endpoint collection for Lets Care All",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    { "name": "Auth Login", "request": { "method": "POST", "url": "{{baseUrl}}/auth/login", "body": { "mode": "raw", "raw": "{\"email\":\"admin@letscareall.com\",\"password\":\"Admin@123\"}" } } },
+    { "name": "Auth Refresh", "request": { "method": "POST", "url": "{{baseUrl}}/auth/refresh" } },
+    { "name": "Roles", "request": { "method": "GET", "url": "{{baseUrl}}/roles" } },
+    { "name": "Permissions", "request": { "method": "GET", "url": "{{baseUrl}}/permissions" } },
+    { "name": "Users", "request": { "method": "GET", "url": "{{baseUrl}}/users" } },
+    { "name": "Tasks", "request": { "method": "GET", "url": "{{baseUrl}}/tasks" } },
+    { "name": "Create Task", "request": { "method": "POST", "url": "{{baseUrl}}/tasks" } },
+    { "name": "Calls", "request": { "method": "GET", "url": "{{baseUrl}}/calls" } },
+    { "name": "Create Call Task", "request": { "method": "POST", "url": "{{baseUrl}}/calls" } },
+    { "name": "Emails", "request": { "method": "GET", "url": "{{baseUrl}}/emails" } },
+    { "name": "Create Email Task", "request": { "method": "POST", "url": "{{baseUrl}}/emails" } },
+    { "name": "Conversations", "request": { "method": "GET", "url": "{{baseUrl}}/conversations" } },
+    { "name": "Send Message", "request": { "method": "POST", "url": "{{baseUrl}}/messages" } },
+    { "name": "Notifications", "request": { "method": "GET", "url": "{{baseUrl}}/notifications" } },
+    { "name": "Reports Status", "request": { "method": "GET", "url": "{{baseUrl}}/reports/tasks-by-status" } },
+    { "name": "Dashboard Widgets", "request": { "method": "GET", "url": "{{baseUrl}}/dashboard/widgets" } },
+    { "name": "Global Search", "request": { "method": "GET", "url": "{{baseUrl}}/search?q=test" } }
+  ],
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:5000/api/v1" }
+  ]
+}

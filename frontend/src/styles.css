@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+:root {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --e-global-color-primary: #272727;
+  --e-global-color-secondary: #34b659;
+  --e-global-color-text: #4c4c4c;
+  --e-global-color-accent: #139639;
+  --e-global-color-da70b5e: #ffffff;
+  --e-global-color-57e21c1: #139639;
+  --e-global-color-ada4927: #34b659;
+  --e-global-color-39ff8bc: #0d6426;
+  --e-global-color-cd5e12d: #f6f6f6;
+  --e-global-color-5febed9: #02010100;
+  --e-global-color-3cd9a13: #4f4f4f;
+  --e-global-color-f40ed66: #00659d;
+  --e-global-color-9f4945d: #398dbc;
+  --e-global-color-54d32f6: #0d4869;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.card-hover {
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(2, 6, 23, 0.12);
+}
+
+.fade-in {
+  animation: fadeIn 220ms ease;
+}
+
+.page-enter {
+  animation: pageIn 220ms ease;
+}
+
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(90deg, #e2e8f0 25%, #f1f5f9 37%, #e2e8f0 63%);
+  background-size: 400% 100%;
+  animation: shimmer 1.25s ease infinite;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-tooltip {
+  position: absolute;
+  background: #0f172a;
+  color: #f8fafc;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  padding: 5px 8px;
+  font-size: 11px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(4px);
+  pointer-events: none;
+  transition: all 0.16s ease;
+}
+
+.nav-item:hover .nav-tooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.kanban-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.kanban-scroll::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 999px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-5px);
+  }
+}
